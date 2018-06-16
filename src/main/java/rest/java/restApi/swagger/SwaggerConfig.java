@@ -15,13 +15,12 @@ public class SwaggerConfig {
     @Bean
     public Docket api(){
         return new Docket(DocumentationType.SWAGGER_2).
-                groupName("ailleron-api").
+                groupName("simple_rest_api").
                 apiInfo(apiInfo()).select().build();
     }
 
     private ApiInfo apiInfo(){
-        return new ApiInfoBuilder().title("Warsztaty").
-                description("costam").termsOfServiceUrl("www.ailleron.pl").
-                license("a").version("1").build();
+        return new ApiInfoBuilder().title("REST API").
+                description("REST API with Spring").version("1.0").build();
     }
 }
